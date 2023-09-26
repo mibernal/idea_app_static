@@ -1,0 +1,138 @@
+/* Agrega el siguiente código al final de tu archivo styles.css */
+
+/* Estilos generales */
+body {
+    font-family: "Roboto", sans-serif; /* Fuente similar a la de Angular Material */
+    background-color: #f8f9fa; /* Fondo general */
+    margin: 0; /* Elimina el margen predeterminado */
+    padding: 0; /* Elimina el relleno predeterminado */
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff; /* Fondo del contenido */
+    border: 1px solid #ddd; /* Borde del contenido */
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Sombra del contenido */
+}
+
+/* Estilos para encabezado */
+header {
+    background-color: #1976D2; /* Color de encabezado similar a Angular Material */
+    color: #fff; /* Color del texto en el encabezado */
+    padding: 10px 0;
+    text-align: center;
+}
+
+h1 {
+    font-size: 36px; /* Tamaño de fuente aumentado */
+    margin: 0;
+    color: #fff;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold; /* Hace que los enlaces sean más prominentes */
+}
+
+/* Estilos para botones */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    text-align: center;
+    text-decoration: none;
+    background-color: #1976D2; /* Color de botón similar a Angular Material */
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-primary {
+    background-color: #1976D2;
+}
+
+.btn-primary:hover {
+    background-color: #1565C0; /* Cambio de color al pasar el mouse similar a Angular Material */
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+}
+
+.btn-secondary:hover {
+    background-color: #545b62;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+}
+
+/* Estilos para imágenes */
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px; /* Agrega un borde redondeado a las imágenes */
+}
+
+/* Pie de página */
+footer {
+    background-color: #1976D2; /* Color de pie de página similar a Angular Material */
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Estilos para campos de formulario */
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+}
+
+/* Estilos para la rejilla de dos columnas */
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.col-md-6 {
+    width: 50%;
+    float: left;
+}
+
+/* Estilos para el botón de guardar y volver */
+.form-group button[type="submit"],
+.form-group a.btn {
+    margin-top: 20px;
+}
+
+/* Ajuste de estilos para mejorar la visualización en pantallas pequeñas */
+@media (max-width: 767px) {
+    .col-md-6 {
+        width: 100%;
+        float: none;
+    }
+}
