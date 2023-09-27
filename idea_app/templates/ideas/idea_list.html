@@ -1,0 +1,25 @@
+<!-- idea_list.html -->
+{% extends 'home.html' %}
+{% load static %}
+
+{% block title %}Lista de Ideas{% endblock %}
+
+{% block content %}
+<div class="container">
+  <h1>Lista de Ideas</h1>
+  <ul>
+    {% for idea in ideas %}
+    <li>
+      <a href="{% url 'idea_detail' idea.pk %}">{{ idea.title }}</a>
+      <p>{{ idea.description }}</p>
+      <p><strong>Usuario:</strong> {{ idea.user.username }}</p>
+      <p><strong>Fecha y Hora:</strong> {{ idea.created_at }}</p>
+      <p><strong>Idea de Software (codigo):</strong> {{ idea.software_idea }}</p> 
+      <p><strong>Imagen:</strong></p>
+      <img src="{{ idea.image.url }}" alt="{{ idea.title }} Imagen">
+    </li>
+    {% endfor %}
+  </ul>
+  <a href="{% url 'idea_create' %}" class="btn btn-primary">Crear Nueva Idea</a>
+</div>
+{% endblock %}
